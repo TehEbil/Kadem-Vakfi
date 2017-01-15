@@ -13,3 +13,24 @@
 .statusbar-overlay {
     background: #000000;
 }
+
+.linksb {
+	float: left;
+	margin-right: 10px;
+}
+
+#idTest {
+	margin: 0 5%;
+	/*background-color: white;*/
+	background-color: hsla(0, 0%, 50%, 0.05);
+}
+
+/*
+.clVideos:nth-child(odd) { background-color: #ddd} */
+.clVideos:nth-child(even) { background-color: #333; color: #eee;}
+
+
+.clVideos {
+	padding-top: 20px;
+	border-bottom: 1.5px solid red
+}
