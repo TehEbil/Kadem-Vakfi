@@ -15,6 +15,9 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.cycrosoft.kademvakfi"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.cycrosoft.kademvakfi"
         }
     },
     "dependent_plugins": {}
