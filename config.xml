@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
 
-    <preference name="Fullscreen" value="true" />
+    <!--preference name="Fullscreen" value="true" /-->
     <platform name="android">
         <preference name="android-minSdkVersion" value="14" />
         <allow-intent href="market:*" />
