@@ -97,9 +97,8 @@ function getVideos()
 	  
 	  videojs("vid1").ready(function(){
 	  var myPlayer = this;
-	  myPlayer.src("https://www.youtube.com/embed/2HSSwu9IVqI");
+	  myPlayer.src("https://www.youtube.com/watch?v=2HSSwu9IVqI");
 	  // EXAMPLE: Start playing the video.
-	  myPlayer.requestFullscreen();
 
 	});
 	  
