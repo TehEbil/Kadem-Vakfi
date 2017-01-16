@@ -13,11 +13,11 @@
         <preference name="android-minSdkVersion" value="14" />
         <allow-intent href="market:*" />
     </platform>
-    <platform name="ios">
+    <!--platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
         <preference name="BackupWebStorage" value="none" />
-    </platform>
+    </platform-->
     <preference name="DisallowOverscroll" value="true" />
     <preference name="permissions" value="none" />
 	
@@ -43,7 +43,11 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
 	
-	<gap:plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
+	
+	<gap:config-file platform="android" parent="/manifest">
+		<application android:hardwareAccelerated="false" />
+	</gap:config-file>
+	
 	<plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
     <feature name="http://api.phonegap.com/1.0/network" />
 </widget>

@@ -64,7 +64,7 @@ function getVideos()
 		} catch(err) {
 				console.log(err);
 		}
-		var pic = data["items"][key_s]["snippet"]["thumbnails"]["default"];
+		var pic = data["items"][key_s]["snippet"]["thumbnails"]["medium"];
 		var url = pic["url"];
 		
 		var vidId = data["items"][key_s]["id"]["videoId"]
@@ -86,7 +86,8 @@ function getVideos()
 		var lesson = (string.match(/_\d\d/g).toString()).replace(/_/g,"");
 		realTitle += lesson;
 		//markup_o += '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + vidId + '" frameborder="0" allowfullscreen></iframe>';
-		markup_o += '<div class="clVideos"> <a id="onChangeVideoClick" onclick="ChangeVideo(\''+ vidId + '\');"><img border="0" class="linksb" alt="111" src="' + url + '" width="' + pic["width"] + '" height="' + pic["height"] + '"></a><p>' + realTitle + '</p><p>' + date + '</p><br style="clear:both" /></div>\n';
+		markup_o += '<div class="clVideos"> <a id="onChangeVideoClick" onclick="ChangeVideo(\''+ vidId + '\');"><img border="0" class="linksb" alt="111" src="' + url + '" width="160" height="90"></a><p>' + realTitle + '</p><p>' + date + '</p><br style="clear:both" /></div>\n';
+		//markup_o += '<div class="clVideos"> <a id="onChangeVideoClick" onclick="ChangeVideo(\''+ vidId + '\');"><img border="0" class="linksb" alt="111" src="' + url + '" width="' + pic["width"] + '" height="' + pic["height"] + '"></a><p>' + realTitle + '</p><p>' + date + '</p><br style="clear:both" /></div>\n';
 		//markup_o += '<div> <a onclick="ChangeVideo(' + vidId + ');" href="https://www.youtube.com/embed/' + vidId + '"><img border="0" alt="W3Schools" src="' + url + '" width="' + pic["width"] + '" height="' + pic["height"] + '"></a><p>' + string + '</p><p>' + date + '</p></div>';
 
 	  }
