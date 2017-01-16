@@ -43,11 +43,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-	
-	
-	<gap:config-file platform="android" parent="/manifest">
-		<application android:hardwareAccelerated="false" />
-	</gap:config-file>
-	
+		
     <feature name="http://api.phonegap.com/1.0/network" />
 </widget>
