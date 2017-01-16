@@ -20,6 +20,10 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
 
+	<link href="http://vjs.zencdn.net/5.15.1/video-js.css" rel="stylesheet">
+	<script src="//vjs.zencdn.net/5.11/video.min.js"></script>
+	
+	
     <!-- Your app title -->
     <title>My App2</title>
 
@@ -31,6 +35,7 @@
     <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
 
     <link rel="stylesheet" href="css/styles.css">
+	<script src="js/youtube.min.js"></script>
 </head>
 
 <body>
@@ -71,9 +76,19 @@
 							<div class="content-block row">
 								<div class="col-50"><a href="#" class="button pb-popup-dark">Klick Mich</a></div>
 							 </div>
+							 
 						</div>
                         <div class="content-block">
 						
+						  <video
+							id="vid1"
+							class="video-js vjs-default-skin"
+							controls
+							autoplay
+							width="640" height="264"
+							data-setup='{"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}]}'
+						  >
+						  </video>
 						
 							<div class="clMainVideo" id="idMainVideo">
 								<div id="player"></div>
@@ -93,6 +108,10 @@
 						
 						
 						
+<p>test</p>
+
+
+<p>test</p>
 						
                     </div>
                 </div>
@@ -100,6 +119,8 @@
         </div>
     </div>
 
+  <script src="http://vjs.zencdn.net/5.15.1/video.js"></script>
+	
 	
     <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
     <script type="text/javascript" src="cordova.js"></script>

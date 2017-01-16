@@ -93,6 +93,19 @@ function getVideos()
 	  }
 	  $$("#idTest").html(markup_o);
 	  
+	  //$$("#vid1").attr("data-setup", '"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}]')
+	  
+	  videojs("vid1").ready(function(){
+	  var myPlayer = this;
+	  myPlayer.src("https://www.youtube.com/embed/2HSSwu9IVqI");
+	  // EXAMPLE: Start playing the video.
+	  myPlayer.requestFullscreen();
+
+	});
+	  
+	  
+	  //document.getElementById("vid1_html5_api").setAttribute("data-setup", 'techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}]'); 
+	  
 	  player = new YT.Player('player', {
 	  height: '250',
 	  width: '100%',
@@ -108,6 +121,9 @@ function getVideos()
 	  //document.getElementById("idTest").innerHTML = "Paragraph changed!";
 	});
 }
+
+
+
 
  // 4. The API will call this function when the video player is ready.
   function onPlayerReady(event) {
@@ -150,7 +166,14 @@ function ChangeVideo(vidId)
  
 /*=== With Video ===*/
 var myPhotoBrowserPopupDark = myApp.photoBrowser({
+	photos : [
+        '<iframe src="https://www.youtube.com/embed/2HSSwu9IVqI?list=PLFr2AXO-26dMtaNuh5-Q8vu0kbhgmggKk" frameborder="0" allowfullscreen></iframe>',
+        'http://lorempixel.com/1024/1024/sports/2/',
+        'http://lorempixel.com/1024/1024/sports/3/',
+    ],
+	/*
     photos : [
+	
         {
             html: '<iframe src="https://www.youtube.com/embed/2HSSwu9IVqI?list=PLFr2AXO-26dMtaNuh5-Q8vu0kbhgmggKk" frameborder="0" allowfullscreen></iframe>',
             caption: 'Aktuell'
@@ -171,10 +194,15 @@ var myPhotoBrowserPopupDark = myApp.photoBrowser({
             html: '<iframe src="https://www.youtube.com/embed/FYX5vQf9bUs?list=PLFr2AXO-26dMtaNuh5-Q8vu0kbhgmggKk" frameborder="0" allowfullscreen></iframe>',
             caption: 'Begrüßung'
         },
-    ],
+    ],*/
     theme: 'dark',
-    type: 'standalone'
+    type: 'standalone',
+	expositionHideCaptions: 'true',
+	navbar: 'false',
+	toolbar: 'false',
+	backLinkText: 'Helloooo'
 });
 $$('.pb-popup-dark').on('click', function () {
     myPhotoBrowserPopupDark.open();
+	//myPhotoBrowserPopupDark.disableExposition();
 });

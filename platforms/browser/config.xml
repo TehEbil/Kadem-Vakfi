@@ -21,7 +21,10 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <gap:plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
+    <gap:config-file parent="/manifest" platform="android">
+        <application android:hardwareAccelerated="false" />
+    </gap:config-file>
+    <preference name="Fullscreen" value="true" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="permissions" value="none" />
 </widget>
