@@ -48,6 +48,5 @@
 		<application android:hardwareAccelerated="false" />
 	</gap:config-file>
 	
-	<plugin name="com.dawsonloudon.videoplayer" version="1.0.0" />
     <feature name="http://api.phonegap.com/1.0/network" />
 </widget>
