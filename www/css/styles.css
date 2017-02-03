@@ -30,10 +30,32 @@
 .clVideos:nth-child(even) { background-color: #333; color: #eee;}
 
 
+.centered {
+	text-align: center;
+}
+
 .clVideos {
 	padding: 5px;
 	padding-top: 20px;
 	border-bottom: 1.5px solid red;
 	margin-top: 20px;
 	margin-bottom: 20px;
+}
+
+table.tableizer-table {
+	margin-left:auto; 
+    margin-right:auto;
+	font-size: 10px;
+	border: 1px solid #CCC; 
+	font-family: Arial, Helvetica, sans-serif;
+} 
+.tableizer-table td {
+	padding: 4px;
+	margin: 3px;
+	border: 1px solid #CCC;
+}
+.tableizer-table th {
+	background-color: #104E8B; 
+	color: #FFF;
+	font-weight: bold;
 }

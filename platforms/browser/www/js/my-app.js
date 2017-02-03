@@ -1,5 +1,16 @@
 // Initialize app
-var myApp = new Framework7();
+var myApp = new Framework7({
+    pushState: true,
+    swipePanel: 'left', 
+	
+	onAjaxStart: function (xhr) {
+        myApp.showIndicator();
+    },
+    onAjaxComplete: function (xhr) {
+        myApp.hideIndicator();
+    }
+    // ... other parameters
+});
 
 
 // If we need to use custom DOM library, let's save it to $$ variable:
@@ -22,6 +33,9 @@ $$(document).on('deviceready', function() {
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
 myApp.onPageInit('about', function (page) {
     // Do something here for "about" page
+	//alert("Test");
+    //myPhotoBrowserPopupDark.open();
+	myApp.closePanel();
 
 })
 
@@ -32,7 +46,7 @@ $$(document).on('pageInit', function (e) {
 
     if (page.name === 'about') {
         // Following code will be executed for page with data-page attribute equal to "about"
-        myApp.alert('Here comes About page');
+        //myApp.alert('Here comes About page');
     }
 })
 
@@ -95,16 +109,16 @@ function getVideos()
 	  
 	  //$$("#vid1").attr("data-setup", '"techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}]')
 	  
-	  videojs("vid1").ready(function(){
+	  /*videojs("vid1").ready(function(){
 	  var myPlayer = this;
 	  myPlayer.src("https://www.youtube.com/watch?v=2HSSwu9IVqI");
 	  // EXAMPLE: Start playing the video.
 
-	});
+	}*/
 	  
 	  
 	  //document.getElementById("vid1_html5_api").setAttribute("data-setup", 'techOrder": ["youtube"], "sources": [{ "type": "video/youtube", "src": "https://www.youtube.com/watch?v=xjS6SftYQaQ"}]'); 
-	  
+	  console.log(firstVid);
 	  player = new YT.Player('player', {
 	  height: '250',
 	  width: '100%',
@@ -117,8 +131,8 @@ function getVideos()
 	  }
 	}); 
 	  
-	  //document.getElementById("idTest").innerHTML = "Paragraph changed!";
 	});
+	  //document.getElementById("idTest").innerHTML = "Paragraph changed!";
 }
 
 
